@@ -1,10 +1,10 @@
 
 public class Retangulo {
 
-	int x;
-	int y;
-	int altura;
-	int largura;
+	private int x;
+	private int y;
+	private int altura;
+	private int largura;
 	
 	public Retangulo(int x, int y, int largura, int altura) {
 		valor++;
@@ -14,6 +14,35 @@ public class Retangulo {
 		this.largura = largura;
 	}
 
+	public int getx() {
+		return x;
+		}
+
+		public void setx(int x) {
+		this.x = x;
+		}
+	
+		public int gety() {
+			return y;
+			}
+
+			public void sety(int y) {
+			this.y = y;
+			}
+		
+			public int getlargura() {
+				return largura;
+				}
+
+								
+				public int getaltura() {
+					return altura;
+					}
+
+				
+					
+					
+	
 	public String imprime() {
 		return "retangulo[X:"+this.x+",Y:"+this.y+",l:"+this.largura+",a:"+this.altura+"]";
 	}
