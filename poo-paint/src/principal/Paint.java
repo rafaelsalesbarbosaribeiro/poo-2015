@@ -1,5 +1,7 @@
 package principal;
 
+import java.util.ArrayList;
+
 import javax.swing.JFrame;
 
 import figuras.Circulo;
@@ -17,8 +19,14 @@ public class Paint extends JFrame {
 		Retangulo ret2 = new Retangulo(400, 150, 30, 30);
 		Circulo c = new Circulo(200, 200, 56);
 		
-		Figura[] figuras = new Figura[]{ret1, ret2, c};
+		ArrayList<Figura> figuras = new ArrayList<Figura>();
+		figuras.add(ret1);
+		figuras.add(ret2);
+		figuras.add(c);
 		AreaDeDesenho areaDeDesenho = new AreaDeDesenho(figuras);
+		Mouse m = new Mouse(areaDeDesenho);
+		areaDeDesenho.addMouseListener(m);
+				
 		this.setContentPane(areaDeDesenho);
 		this.setDefaultCloseOperation(EXIT_ON_CLOSE);
 		this.pack();
