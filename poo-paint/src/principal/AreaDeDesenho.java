@@ -5,7 +5,10 @@ import java.awt.Graphics;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.swing.ButtonGroup;
 import javax.swing.JPanel;
+import javax.swing.JToggleButton;
+import javax.swing.JToolBar;
 
 import figuras.Figura;
 
@@ -31,5 +34,28 @@ public class AreaDeDesenho extends JPanel {
 			f.desenha(g);
 		}
 	}
-
+	
+	
+	
+	JToolBar barraDeFerramentas = new JToolBar("Barra de Ferramentas"); 
+	painelPrincipal.add(barraDeFerramentas, BorderLayout.PAGE_START);
+	
+	JPanel painelPrincipal = new JPanel();
+	painelPrincipal.setLayout(new BorderLayout());
+	
+	
+	
+	ButtonGroup grupoDeBotoes = new ButtonGroup(); 
+	JToggleButton botaoRetangulo = new JToggleButton("Retangulo"); 
+	//botaoRetangulo.addActionListener(/* Aqui vem um ActionListener */); 
+	botaoRetangulo.getModel().setPressed(true); 
+	grupoDeBotoes.add(botaoRetangulo);
+	
+	
+	barraDeFerramentas.add(botaoRetangulo); 
+	barraDeFerramentas.setFloatable(false);
+	
+	
+	
+	
 }
